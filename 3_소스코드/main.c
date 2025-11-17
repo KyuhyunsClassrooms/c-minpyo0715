@@ -1,36 +1,30 @@
 #include <stdio.h>
 
-/*
-    1. [설계]에서 정의한 변수, 배열, (필요하면) 구조체를 여기에 선언하세요.
-    
-    예시 - 배열 사용:
-    char names[100][20];
-    int scores[100];
-    int count = 0;
-    
-    예시 - 구조체 사용 (선택):
-    struct Student {
-        char name[20];
-        int score;
-    };
-    struct Student students[100];
-*/
+void func1() {
+    printf(">> func1 실행!\n");
+}
 
-
-/*
-    2. [알고리즘]에서 설계한 핵심 기능 함수들을 여기에 선언하세요.
-*/
-
+void func2() {
+    printf(">> func2 실행!\n");
+}
 
 int main() {
-    
-    printf("--- C언어 미니 프로젝트 시작! ---\n");
+    int select;
 
-    /*
-        3. [알고리즘]에서 설계한 main 함수의 흐름을
-           여기에 C언어로 자유롭게 구현하세요.
-    */
-    
-    
+    // 함수 선택 메뉴 출력
+    printf("=== 함수 선택 ===\n");
+    printf("1. func1 실행\n");
+    printf("2. func2 실행\n");
+    printf("번호 입력: ");
+    scanf("%d", &select);
+
+    // 선택된 함수 실행
+    if (select == 1)
+        func1();
+    else if (select == 2)
+        func2();
+    else
+        printf("잘못된 선택입니다.\n");
+
     return 0;
 }
