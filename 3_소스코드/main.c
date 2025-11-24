@@ -19,9 +19,13 @@ void func1() {
 void func2() {
     printf(">> 파동 주기 계산기 실행!\n");
     printf("순서대로 파장과 속도를 입력해주세요");
-    int w, v, s;
+    double w, V, S;
 
-    scanf("%f %f %f" &w, %v, &s);
+    scanf("%lf %lf", &w, &V);
+
+    S = w / V;
+    printf("파장의 주기는 %f입니다\n", S);
+    
     
 
 
@@ -30,14 +34,13 @@ void func2() {
 int main() {
     int select;
 
-    // 함수 선택 메뉴 출력
+   
     printf("=== 함수 선택 ===\n");
     printf("1. 역학시뮬레이션 실행\n");
     printf("2. 파동 주기 계산기 실행\n");
     printf("번호 입력: ");
     scanf("%d", &select);
 
-    // 선택된 함수 실행
     if (select == 1)
         func1();
     else if (select == 2)
